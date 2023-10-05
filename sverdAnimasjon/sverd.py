@@ -39,12 +39,12 @@ angrep_animasjon = False
 
 
 # Standardbilde før og etter angrep
-standard_bilde = pygame.image.load(os.path.join('game', 'angrep_animasjon', "still.png"))
+standard_bilde = pygame.image.load(os.path.join('sverdAnimasjon', 'angrep_animasjon', "still.png"))
 
 
 # Last inn angrepsanimasjonsbildene
 for i in range(1, 7):  # Antall bilder (1 til 6)
-    bilde_navn = os.path.join('game', 'angrep_animasjon',f"attack{i}.png")
+    bilde_navn = os.path.join('sverdAnimasjon', 'angrep_animasjon',f"attack{i}.png")
     bilde = pygame.image.load(bilde_navn)
     angrep_bilder.append(bilde)
 
@@ -113,9 +113,9 @@ while True:
         # Vis standardbilde når ikke i angrep
         skjerm.fill(hvit)
         if går_venstre:
-            skjerm.blit(pygame.image.load(os.path.join('game', 'angrep_animasjon',"go_left.png")), (spiller_x, spiller_y))
+            skjerm.blit(pygame.image.load(os.path.join('sverdAnimasjon', 'angrep_animasjon',"go_left.png")), (spiller_x, spiller_y))
         elif går_høyre:
-            skjerm.blit(pygame.image.load(os.path.join('game', 'angrep_animasjon',"go_right.png")), (spiller_x, spiller_y))
+            skjerm.blit(pygame.image.load(os.path.join('sverdAnimasjon', 'angrep_animasjon',"go_right.png")), (spiller_x, spiller_y))
         else:
             skjerm.blit(standard_bilde, (spiller_x, spiller_y))  # Posisjon for standardbilde
 
